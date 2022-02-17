@@ -1,0 +1,27 @@
+#include <stdio.h>    //奇数-n%2==1-3n+1/2  偶数-n%2==0-n/2
+int main()
+{
+    int n=0;
+    int count=0;
+    scanf("%d",&n);
+    if(0 < n <=1000)
+    {    
+        while(n != 1)
+        {
+            if(n%2==1)
+            {
+                n = (3*n+1)/2;
+                count++;
+            }    
+            else
+            {
+                n = n/2;
+                count++;
+            }
+        }    
+        printf("%d\n",count);
+    }
+    else
+        printf("error\n");
+    return 0;
+}
